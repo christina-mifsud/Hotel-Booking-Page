@@ -1,8 +1,7 @@
 import React from "react";
 import Headers from "./Headers";
 import Bookings from "./Bookings";
-import FakeBookings from "./data/fakeBookings.json";
-import SearchResults from "./SearchResults";
+import Restaurant from "./Restaurant";
 import TouristInfoCards from "./TouristInfoCards";
 import "./App.css";
 import Footer from "./Footer";
@@ -12,7 +11,7 @@ const App = () => {
     <div className="App">
       <Headers />
       <Bookings />
-      <SearchResults results={FakeBookings} />
+      <Restaurant />
       <TouristInfoCards />
       <Footer />
     </div>
