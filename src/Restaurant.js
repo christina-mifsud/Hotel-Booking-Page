@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RestaurantButton from "./RestaurantButton";
 
 const Restaurant = () => {
   const [order, orderState] = useState(0);
