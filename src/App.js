@@ -1,12 +1,13 @@
 import React from "react";
-import Header from "./Header";
+import Heading from "./Heading";
 import Bookings from "./Bookings";
 import "./App.css";
+import "./Heading.css";
 
 const App = () => {
   return (
     <div className="App">
-      <Header />
+      <Heading />
       <Bookings />
     </div>
   );
