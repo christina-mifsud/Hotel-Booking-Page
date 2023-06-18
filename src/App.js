@@ -9,9 +9,15 @@ import TouristInfoCards from "./TouristInfoCards";
 const App = () => {
   return (
     <div className="App">
-      <Heading />
-      <TouristInfoCards />
-      <Bookings />
+      <div className="heading">
+        <Heading />
+      </div>
+      <div className="card-container">
+        <TouristInfoCards />
+      </div>
+      <div className="bookings">
+        <Bookings />
+      </div>
     </div>
   );
 };

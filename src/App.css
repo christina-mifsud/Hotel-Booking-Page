@@ -1,5 +1,15 @@
 .App {
   text-align: left;
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  grid-template-areas:
+    ". header ."
+    ". card ."
+    ". booking .";
+}
+
+.bookings {
+  grid-area: booking;
 }
 
 .App-logo {

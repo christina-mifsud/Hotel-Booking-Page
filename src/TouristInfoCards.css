@@ -1,3 +1,9 @@
 .card {
-  width: 18rem;
+  width: 20rem;
+}
+
+.card-container {
+  grid-area: card;
+  display: flex;
+  justify-content: space-evenly;
 }
