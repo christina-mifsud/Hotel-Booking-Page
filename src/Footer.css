@@ -1,0 +1,13 @@
+.footer {
+  grid-area: footer;
+}
+
+.footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.footer li {
+  margin-inline: 1rem;
+}
