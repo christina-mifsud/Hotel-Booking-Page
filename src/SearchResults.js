@@ -1,5 +1,5 @@
 import moment from "moment";
-import React from "react";
+import React, { useState } from "react";
 
 function SearchResults({ results }) {
   return (
@@ -19,23 +19,29 @@ function SearchResults({ results }) {
       </thead>
       <tbody>
         {results.map((element) => {
+          const [highlight, setHighlight] = useState(false);
+          function isSelected() {
+            setHighlight(!highlight);
+          }
+          const addClass = highlight ? "highlighted" : "";
+
           return (
             <>
-              <tr>
-                <th>{element.id}</th>
-                <th>{element.title}</th>
-                <th>{element.firstName}</th>
-                <th>{element.surname}</th>
-                <th>{element.email}</th>
-                <th>{element.roomId}</th>
-                <th>{element.checkInDate}</th>
-                <th>{element.checkOutDate}</th>
-                <th>
+              <tr onClick={isSelected} className={addClass}>
+                <td>{element.id}</td>
+                <td>{element.title}</td>
+                <td>{element.firstName}</td>
+                <td>{element.surname}</td>
+                <td>{element.email}</td>
+                <td>{element.roomId}</td>
+                <td>{element.checkInDate}</td>
+                <td>{element.checkOutDate}</td>
+                <td>
                   {moment(element.checkOutDate).diff(
                     element.checkInDate,
                     "days"
                   )}
-                </th>
+                </td>
               </tr>
             </>
           );

@@ -43,6 +43,11 @@ tr {
   color: #5b5757;
 }
 
+.highlighted {
+  background-color: #ff7f51;
+  color: #222;
+}
+
 .results {
   padding-top: 15px;
 }
