@@ -1,14 +1,21 @@
 import React, { useState } from "react";
 
 const Restaurant = () => {
-  const [orders, setOrder] = useState(0);
+  const [orderCount, setOrder] = useState(0);
+
+  const orderOne = () => {
+    setOrder(orderCount + 1);
+  };
 
   return (
     <div>
       <h3>Restaurant Orders</h3>
       <ul>
         <li>
-          Pizzas: {orders} <button className="btn btn-primary">Add</button>
+          Pizzas: {orderCount}{" "}
+          <button onClick={orderOne} className="btn btn-primary">
+            Add
+          </button>
         </li>
       </ul>
     </div>
