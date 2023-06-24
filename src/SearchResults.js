@@ -1,6 +1,19 @@
 import react from "react";
 
-const SearchResults = () => {
+const SearchResults = ({ results }) => {
+  const tableRowResults = results.map((person) => (
+    <tr>
+      <td>{person.id}</td>
+      <td>{person.title}</td>
+      <td>{person.firstName}</td>
+      <td>{person.surname}</td>
+      <td>{person.email}</td>
+      <td>{person.roomId}</td>
+      <td>{person.checkInDate}</td>
+      <td>{person.checkOutDate}</td>
+    </tr>
+  ));
+
   return (
     <table>
       <thead>
@@ -15,18 +28,7 @@ const SearchResults = () => {
           <th>Check Out Date</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>A</td>
-          <td>B</td>
-          <td>C</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
+      <tbody>{tableRowResults}</tbody>
     </table>
   );
 };
