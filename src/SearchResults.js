@@ -2,19 +2,27 @@ import react from "react";
 import moment from "moment";
 
 const SearchResults = ({ results }) => {
-  const tableRowResults = results.map((person) => (
-    <tr key={person.id}>
-      <td>{person.id}</td>
-      <td>{person.title}</td>
-      <td>{person.firstName}</td>
-      <td>{person.surname}</td>
-      <td>{person.email}</td>
-      <td>{person.roomId}</td>
-      <td>{person.checkInDate}</td>
-      <td>{person.checkOutDate}</td>
-      <td>{moment(person.checkOutDate).diff(moment(person.checkInDate))}</td>
-    </tr>
-  ));
+  const tableRowResults = results.map((person) => {
+    // curly brackets are a multi-line statement function
+    // normal brackets return a single statement (one thing i.e the <tr>)
+    // I can declare variables here!
+    let checkInDate = moment(person.checkInDate);
+    let checkOutDate = moment(person.checkOutDate);
+
+    return (
+      <tr key={person.id}>
+        <td>{person.id}</td>
+        <td>{person.title}</td>
+        <td>{person.firstName}</td>
+        <td>{person.surname}</td>
+        <td>{person.email}</td>
+        <td>{person.roomId}</td>
+        <td>{checkInDate.format("DD MMM YYYY")}</td>
+        <td>{checkOutDate.format("DD MMM YYYY")}</td>
+        <td>{checkOutDate.diff(checkInDate, "days")}</td>
+      </tr>
+    );
+  });
 
   return (
     <table>
