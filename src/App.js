@@ -1,12 +1,14 @@
 import React from "react";
 import Heading from "./Heading";
 import Bookings from "./Bookings";
+import TouristInfoCards from "./TouristInfoCards";
+import Footer from "./Footer";
+import Restaurant from "./Restaurant";
 import "./App.css";
 import "./Heading.css";
 import "./TouristInfoCards.css";
 import "./Footer.css";
-import TouristInfoCards from "./TouristInfoCards";
-import Footer from "./Footer";
+import "./Restaurant.css";
 
 const App = () => {
   return (
@@ -19,6 +21,9 @@ const App = () => {
       </div>
       <div className="bookings">
         <Bookings />
+      </div>
+      <div className="restaurant">
+        <Restaurant />
       </div>
       <div className="footer">
         <Footer
