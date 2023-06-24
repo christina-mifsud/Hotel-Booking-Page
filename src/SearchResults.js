@@ -1,4 +1,5 @@
 import react from "react";
+import moment from "moment";
 
 const SearchResults = ({ results }) => {
   const tableRowResults = results.map((person) => (
@@ -11,7 +12,7 @@ const SearchResults = ({ results }) => {
       <td>{person.roomId}</td>
       <td>{person.checkInDate}</td>
       <td>{person.checkOutDate}</td>
-      <td></td>
+      <td>{moment(person.checkOutDate).diff(moment(person.checkInDate))}</td>
     </tr>
   ));
 
