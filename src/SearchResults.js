@@ -11,6 +11,7 @@ const SearchResults = ({ results }) => {
       <td>{person.roomId}</td>
       <td>{person.checkInDate}</td>
       <td>{person.checkOutDate}</td>
+      <td></td>
     </tr>
   ));
 
@@ -26,6 +27,7 @@ const SearchResults = ({ results }) => {
           <th>Room ID</th>
           <th>Check In Date</th>
           <th>Check Out Date</th>
+          <th>Number of Nights</th>
         </tr>
       </thead>
       <tbody>{tableRowResults}</tbody>
