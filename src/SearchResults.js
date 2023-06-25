@@ -9,8 +9,12 @@ const SearchResults = ({ results }) => {
     let checkInDate = moment(person.checkInDate);
     let checkOutDate = moment(person.checkOutDate);
 
+    function test() {
+      alert("You clicked me!");
+      console.log(person.id);
+    }
     return (
-      <tr key={person.id}>
+      <tr key={person.id} onClick={test}>
         <td>{person.id}</td>
         <td>{person.title}</td>
         <td>{person.firstName}</td>
