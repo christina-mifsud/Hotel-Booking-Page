@@ -12,7 +12,7 @@ function Order({ orderType }) {
 
   return (
     <>
-      <li>
+      <li className="order-li">
         {orderType}: {orders}
         <RestaurantButton setOrders={orderOne} />
       </li>

@@ -14,8 +14,8 @@ const App = () => {
       <>
         <Header />
         <Bookings />
-        <Restaurant />
         <TouristInfoCards />
+        <Restaurant />
         <Footer />
       </>
     </div>

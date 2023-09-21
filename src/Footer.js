@@ -9,11 +9,9 @@ const footerArray = [
 function Footer() {
   const footerAddress = footerArray.map((item, index) => {
     return (
-      <>
-        <ul className="footer">
-          <li key={index}>{item}</li>
-        </ul>
-      </>
+      <ul className="footer" key={index}>
+        <li className="footer-item">{item}</li>
+      </ul>
     );
   });
   return <>{footerAddress}</>;

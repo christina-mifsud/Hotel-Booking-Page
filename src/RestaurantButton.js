@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 function RestaurantButton({ setOrders }) {
   return (
     <>
-      <button className="btn btn-primary" onClick={setOrders}>
-        Adddddddddd
+      <button className="btn btn-primary order-button" onClick={setOrders}>
+        Add Item
       </button>
     </>
   );
