@@ -7,14 +7,17 @@ const footerArray = [
 ];
 
 function Footer() {
-  const footerAddress = footerArray.map((item, index) => {
-    return (
-      <ul className="footer" key={index}>
-        <li className="footer-item">{item}</li>
-      </ul>
-    );
-  });
-  return <>{footerAddress}</>;
+  const footerAddress = footerArray.map((item, index) => (
+    <li className="footer-item" key={index}>
+      {item}
+    </li>
+  ));
+
+  return (
+    <div className="footer-container">
+      <ul className="footer-ul">{footerAddress}</ul>
+    </div>
+  );
 }
 
 export default Footer;

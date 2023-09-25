@@ -11,7 +11,7 @@ function SearchResultRow({ booking }) {
   let rowStyle = {};
 
   if (isRowSelected) {
-    rowStyle = { backgroundColor: "green" };
+    rowStyle = { backgroundColor: "#e6b238" };
   }
 
   return (

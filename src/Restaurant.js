@@ -22,8 +22,8 @@ const Restaurant = () => {
         </div>
 
         <div className="card card-restaurant">
-          <h4 className="text-left">Restaurant Orders</h4>
-          <ul className="tr">
+          <h4 className="restaurant-title">Restaurant Orders</h4>
+          <ul className="restaurant-tr">
             <Order orderType={"Pizza"} />
             <Order orderType={"Salads"} />
             <Order orderType={"Chocolate Cake"} />

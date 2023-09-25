@@ -32,9 +32,10 @@ function TouristInfoCards() {
           <div className="card-body">
             <h1>Manchester</h1>
             <p>
-              Famed for its soccer team and music scene, which has produced the
-              likes of The Smiths and Oasis, this centre for sports and the arts
-              is a down-to-earth and friendly city.
+              Manchester is a major city in the northwest of England with a rich
+              industrial heritage. Famed for its soccer team and music scene,
+              which has produced the likes of The Smiths and Oasis, this centre
+              for sports and the arts is a down-to-earth and friendly city.
             </p>
             <a href="www.visitmanchester.com" className="btn btn-primary">
               More Information
