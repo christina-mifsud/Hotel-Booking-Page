@@ -8,7 +8,7 @@ const Bookings = () => {
 
   useEffect(() => {
     console.log("some text, some more text");
-    fetch("https://cyf-react.glitch.me")
+    fetch("https://cyf-hotel-api.netlify.app/")
       .then((response) => response.json())
       .then((data) => {
         setBookings(data);
@@ -20,8 +20,8 @@ const Bookings = () => {
   const search = (searchVal) => {
     let searchResult = bookings.filter((booking) => {
       return (
-        booking.firstName.toLowerCase().includes(searchVal) ||
-        booking.surname.toLowerCase().includes(searchVal)
+        booking.firstName.toLowerCase().includes(searchVal.toLowerCase()) ||
+        booking.surname.toLowerCase().includes(searchVal.toLowerCase())
       );
     });
     setFilterBookings(searchResult);
